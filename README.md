@@ -36,12 +36,33 @@ final da disciplina. Roda no MARS.
 
 ## Como rodar
 
+### Pelo MARS (GUI)
+
 1. Abre o MARS
 2. `File > Open` e escolhe o `.asm` que quer testar
 3. `Ctrl + F3` pra montar
 4. `F5` pra rodar ate o fim, `F7` pra ir passo a passo
 5. Quando o programa pedir um numero, digita na janela **Run I/O** que
    fica embaixo
+
+### Pelo terminal
+
+Primeiro baixe o MARS e configure o alias:
+
+```bash
+mkdir -p ~/bin
+curl -L "https://github.com/dpetersanderson/MARS/releases/download/v.4.5.1/Mars4_5.jar" -o ~/bin/Mars4_5.jar
+alias mars='java -jar ~/bin/Mars4_5.jar'
+```
+
+Exemplo de execucao do Ex02 com entrada 4:
+
+```bash
+echo "4" | java -jar ~/bin/Mars4_5.jar nc Ex02.asm
+```
+
+O `nc` remove o aviso de copyright pra saida ficar limpa. Cada valor
+digitado vai pelo stdin, um por linha.
 
 ---
 
