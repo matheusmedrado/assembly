@@ -1,6 +1,6 @@
 # Ex02 - Inicializa vetor de 10 posicoes com a sequencia de 1 a 10.
-# Le um inteiro entre 0 e 9 e imprime o conteudo das posicoes
-# cujo indice for diferente do valor lido.
+# Le um inteiro entre 1 e 10 e imprime o conteudo das posicoes
+# cuja posicao for diferente do valor lido.
 
 		.data
 vet:		.word 1, 2, 3, 4, 5, 6, 7, 8, 9, 10		# declara vetor de 10 posicoes com a sequencia 1..10

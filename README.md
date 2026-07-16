@@ -23,7 +23,13 @@ final da disciplina. Roda no MARS.
 ├── README.md
 ├── Ex01.asm
 ├── Ex02.asm
-└── Ex03.asm
+├── Ex03.asm
+└── assets/
+    ├── ex01-entrada-zero.png
+    ├── ex01-entrada-diferente-zero.png
+    ├── ex02.png
+    ├── ex03-atualiza.png
+    └── ex03-nao-atualiza.png
 ```
 
 ---
@@ -73,6 +79,32 @@ imprime o vetor em uma linha.
 ```
 Se vet[1] = 10 e N = 3, os indices 1, 3, 5, ..., 19 viram 4
 ```
+
+---
+
+## Capturas de tela
+
+As capturas abaixo mostram a execucao de cada exercicio no terminal:
+
+### Ex01 - Entrada igual a zero (preenche pares)
+
+![Ex01 com entrada 0](assets/ex01-entrada-zero.png)
+
+### Ex01 - Entrada diferente de zero (preenche impares)
+
+![Ex01 com entrada diferente de zero](assets/ex01-entrada-diferente-zero.png)
+
+### Ex02 - Filtrar por posicao
+
+![Ex02 filtrando posicoes](assets/ex02.png)
+
+### Ex03 - Atualizacao das posicoes impares (N < vet[1])
+
+![Ex03 com atualizacao](assets/ex03-atualiza.png)
+
+### Ex03 - Sem atualizacao (N >= vet[1])
+
+![Ex03 sem atualizacao](assets/ex03-nao-atualiza.png)
 
 ---
 
