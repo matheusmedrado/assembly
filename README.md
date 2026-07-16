@@ -52,14 +52,15 @@ Entrada:  0  -> vetor final: 2 0 2 0 2 0 2 0 2 0
 Entrada:  7  -> vetor final: 0 1 0 1 0 1 0 1 0 1
 ```
 
-### Ex02 - Filtrar por indice
+### Ex02 - Filtrar por posicao
 
 Vetor de 10 posicoes ja inicializado com a sequencia `1 2 3 4 5 6 7 8
-9 10`. Le um inteiro entre 0 e 9 e imprime o conteudo das posicoes
-cujo indice for diferente do valor lido.
+9 10`. Le um inteiro entre 1 e 10 e imprime o conteudo das posicoes
+cuja posicao for diferente do valor lido.
 
 ```
 Entrada:  4  -> imprime: 1 2 3 5 6 7 8 9 10
+Entrada:  2  -> imprime: 1 3 4 5 6 7 8 9 10
 ```
 
 ### Ex03 - Atualizar impares sob condicao

@@ -4,7 +4,7 @@
 
 		.data
 vet:		.word 1, 2, 3, 4, 5, 6, 7, 8, 9, 10		# declara vetor de 10 posicoes com a sequencia 1..10
-msg1:		.asciiz "Digite um numero inteiro entre 0 e 9: "	# mensagem para pedir o indice a ignorar
+msg1:		.asciiz "Digite um numero inteiro entre 1 e 10: "	# mensagem para pedir a posicao a ignorar (1 a 10)
 msg2:		.asciiz "Posicoes com indice diferente: "		# cabecalho da impressao
 msg3:		.asciiz " "					# espaco usado para separar os valores impressos
 msg4:		.asciiz "\n"					# quebra de linha ao final
@@ -28,10 +28,11 @@ msg4:		.asciiz "\n"					# quebra de linha ao final
 		li $v0, 4					# codigo 4 = imprime string
 		syscall						# imprime o cabecalho
 
-		# --- Loop: percorre as 10 posicoes e imprime as que tem indice diferente do lido ---
+		# --- Loop: percorre as 10 posicoes e imprime as que tem posicao diferente da lida ---
 		LoopFiltra:
 		beq $t1, $t2, FimLoop				# se i == 10 sai do loop
-		beq $t1, $t0, PulaImpressao			# se i == valor lido, pula a impressao desta posicao
+		addi $t5, $t1, 1				# $t5 recebe i + 1 (posicao em formato humano, 1-based)
+		beq $t5, $t0, PulaImpressao			# se a posicao (1-based) == valor lido, pula a impressao
 		lw $a0, 0($t3)					# carrega o valor da posicao atual do vetor
 		li $v0, 1					# codigo 1 = imprime inteiro
 		syscall						# imprime o valor
