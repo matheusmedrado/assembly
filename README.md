@@ -1,11 +1,8 @@
-# Trabalho de Assembly MIPS
+# Trabalho Final de Codificacao - Assembly MIPS
 
-Repositorio com as solucoes dos exercicios praticos da disciplina de
-Arquitetura e Organizacao de Computadores, ministrada pelo professor
-Renato de Aquino Lopes.
-
-Os programas foram escritos em assembly MIPS e devem ser executados no
-simulador MARS (MIPS Assembler and Runtime Simulator).
+Trabalho final da disciplina de Arquitetura e Organizacao de Computadores,
+professor Renato de Aquino Lopes. O repo guarda os tres arquivos `.asm`
+feitos em assembly MIPS, pra rodar no MARS.
 
 ## Grupo 8
 
@@ -13,76 +10,44 @@ simulador MARS (MIPS Assembler and Runtime Simulator).
 - Matheus Andrade Tabchoury
 - Matheus Medrado Ferreira
 
-## Sobre o trabalho
-
-O trabalho e composto por tres exercicios que praticam manipulacao de
-vetores, leitura e escrita de inteiros via syscall e estruturas basicas
-de repeticao e decisao em assembly MIPS.
-
-Restricoes adotadas:
-
-- Foram utilizadas apenas instrucoes vistas em aula, conforme o conjunto
-  apresentado nas aulas 8 e 9 (Linguagem de Montagem e Suporte a
-  Procedimentos): add, addi, sub, mul, lw, sw, and, andi, or, ori,
-  sll, srl, beq, bne, slt, slti, j, jal, jr, li, la, move e syscall
-  com os codigos 1, 4, 5 e 10.
-- Todas as linhas de codigo estao comentadas, descrevendo de forma
-  objetiva o que cada instrucao executa.
-
-## Estrutura dos arquivos
+## O que tem aqui
 
 ```
 .
 ├── README.md
 ├── Ex01.asm
 ├── Ex02.asm
-└── Ex03.asm
+├── Ex03.asm
+└── contexto/
 ```
 
-A pasta `contexto/` contem o material de apoio utilizado durante o
-desenvolvimento (slides das aulas e exemplos fornecidos pelo professor).
+A pasta `contexto/` so guarda o material de aula (slides e exemplos que o
+professor passou). Os tres arquivos que valem nota sao os `Ex0X.asm` na
+raiz.
 
-## Como executar
+## Como rodar
 
-1. Abra o MARS.
-2. Carregue o arquivo `.asm` desejado atraves do menu File > Open.
-3. Monte o programa com o botao Assemble (ou Ctrl + F3).
-4. Execute passo a passo com F7 ou ate o final com F5.
-5. A interacao com o usuario (leitura de inteiros) acontece na janela
-   "Run I/O", na parte inferior do MARS.
+Abre o `.asm` no MARS, monta com Ctrl+F3, roda com F5. A leitura dos
+numeros acontece na janela "Run I/O" embaixo.
 
-## Descricao dos exercicios
+## Os exercicios
 
-### Ex01.asm
+**Ex01.asm** - Le um inteiro. Se for zero, preenche os indices pares do
+vetor de 10 posicoes com 2. Se nao for zero, preenche os indices impares
+com 1. Vetor comeca todo zerado. No final imprime o vetor em uma linha.
 
-Le um numero inteiro do teclado. Se o valor lido for igual a zero,
-preenche as posicoes de indice par (0, 2, 4, 6 e 8) do vetor com o
-valor 2. Caso o valor seja diferente de zero, preenche as posicoes de
-indice impar (1, 3, 5, 7 e 9) com o valor 1. O vetor de dez posicoes e
-inicializado com zeros e, durante o preenchimento, o programa imprime
-qual posicao esta sendo alterada. Ao final, o vetor resultante e
-exibido em uma unica linha, com os valores separados por espaco.
+**Ex02.asm** - Vetor de 10 posicoes com 1 a 10. Le um inteiro de 0 a 9
+e imprime o conteudo das posicoes cujo indice for diferente do valor
+lido.
 
-### Ex02.asm
+**Ex03.asm** - Le 20 inteiros do usuario e guarda no vetor. Apos isso
+le mais um inteiro N. Se N for menor que o segundo elemento do vetor
+(vet[1]), troca os indices impares por 4. No final imprime o vetor em
+uma linha.
 
-Inicializa um vetor de dez posicoes com a sequencia de 1 a 10. Em
-seguida, le um numero inteiro entre 0 e 9 e imprime o conteudo de
-todas as posicoes cujo indice seja diferente do valor informado. A
-saida e apresentada em uma unica linha.
+## Restricoes seguidas
 
-### Ex03.asm
-
-Inicializa um vetor de vinte posicoes com zeros e solicita ao usuario
-que informe, um a um, os vinte valores que irao compor o vetor. Apos o
-preenchimento, le um numero inteiro N. Se N for estritamente menor do
-que o segundo elemento do vetor (indice 1), as posicoes de indice
-impar (1, 3, 5, ..., 19) sao atualizadas com o valor 4. Caso contrario,
-o vetor permanece inalterado. O vetor final e exibido em uma unica
-linha, com os valores separados por espaco.
-
-## Material de consulta
-
-- Patterson, D. A.; Hennessy, J. L. Organizacao e Projeto de
-  Computadores: A Interface Hardware/Software.
-- Slides da disciplina (pasta `contexto/Aulas/`).
-- Exemplos de codigo fornecidos em aula (pasta `contexto/`).
+- So foram usadas instrucoes vistas em aula (aulas 8 e 9): add, addi,
+  sub, mul, lw, sw, and, andi, or, ori, sll, srl, beq, bne, slt, slti,
+  j, jal, jr, li, la, move e syscall (1, 4, 5, 10).
+- Toda linha de codigo esta comentada.
