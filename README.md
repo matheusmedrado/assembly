@@ -10,7 +10,7 @@ final da disciplina. Roda no MARS.
 
 ## Integrantes
 
-- Giovana Medeiros Ferreira 12221BCC033
+- Giovana M. Ferreira 12221BCC033
 - Matheus de Andrade Tabchoury 12311BCC066
 - Matheus Medrado Ferreira
 
